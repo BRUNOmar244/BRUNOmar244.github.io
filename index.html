@@ -1,32 +1,39 @@
 <!DOCTYPE html> <!--Diz para o navegador que o arquivo utiliza HTML 5-->
-<html lang="pt-BR" > <!--INICIO DO HTML (pai de todos - contem tabem um atributo lang que diz ao navegador que a pagina eh em PT)  -->
+<html lang="pt-BR">
+<!--INICIO DO HTML (pai de todos - contem tabem um atributo lang que diz ao navegador que a pagina eh em PT)  -->
+
 <head> <!-- CABECALHO com informacoes para o navegador (de modo geral)-->
     <meta charset="UTF-8"> <!-- caracters no padrao UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- padrao da janela do navegador-->
     <title>Site dos Patos</title><!--titulo da aba-->
-     <link rel="stylesheet" herf="style.css"> 
-    
+    <link rel="stylesheet" href="style.css" />
+
 </head>
-<body> 
-     <script src="app.js"></script><!--Inicio da pagina para o usuario-->
-    <header> <!-- tag semantica  (nao tem funcao pratica, apenas diz ao navegador que eh o top da pagina e auxilia leitores de text e accessibila)-->
-        <h1>Bem-vindo ao Mundo dos Patos</h1> <!-- h1 Cabelha 1 MAior --> 
+
+<body>
+    <script src="app.js"></script><!--Inicio da pagina para o usuario-->
+    <header>
+        <!-- tag semantica  (nao tem funcao pratica, apenas diz ao navegador que eh o top da pagina e auxilia leitores de text e accessibila)-->
+        <h1>Bem-vindo ao Mundo dos Patos</h1> <!-- h1 Cabelha 1 MAior -->
         <p>O melhor site para quem ama patos!</p> <!-- paragrafo-->
     </header>
 
     <nav> <!-- tag sematinca que indica navegacao-->
-        <a href="#">Início</a>  <!-- tag anchor, usada para links, ela contem o atributo href eh o destino-->
+        <a href="#">Início</a> <!-- tag anchor, usada para links, ela contem o atributo href eh o destino-->
         <a href="/especies">Espécies</a>
         <a href="#">Curiosidades</a>
         <a href="#">Contato</a>
     </nav>
 
-    <main> <!-- conteudo principal do site -->  
-        <h2>Conheça o pato</h2> 
-        <img src="https://i0.statig.com.br/bancodeimagens/5t/h7/8v/5th78vhs4x0od12627ueuhor2.jpg" alt="Pato bonito"> <!--tag de imagem ela tem src source "fonte" alt caso a imagem nao carregue fica esse text -->
-        <p>Patos são aves aquáticas muito simpáticas e inteligentes. Eles vivem em lagos, rios e até em parques urbanos.</p>
+    <main> <!-- conteudo principal do site -->
+        <h2>Conheça o pato</h2>
+        <img src="https://i0.statig.com.br/bancodeimagens/5t/h7/8v/5th78vhs4x0od12627ueuhor2.jpg" alt="Pato bonito">
+        <!--tag de imagem ela tem src source "fonte" alt caso a imagem nao carregue fica esse text -->
+        <p>Patos são aves aquáticas muito simpáticas e inteligentes. Eles vivem em lagos, rios e até em parques urbanos.
+        </p>
 
-        <div class="curiosidades"> <!-- div eh uma tag em branco para divisorias note que ela tem o atributo class="curiosidaas" ou seja o CODIGO CSS vai buscar por essa palvra chave-->
+        <div class="curiosidades">
+            <!-- div eh uma tag em branco para divisorias note que ela tem o atributo class="curiosidaas" ou seja o CODIGO CSS vai buscar por essa palvra chave-->
             <h3>Curiosidades:</h3>
             <ul> <!-- Unordered list - lista sem ordem -->
                 <li>Patos podem dormir com um olho aberto.</li> <!-- item da lista-->
@@ -41,5 +48,5 @@
         &copy; 2025 Site dos Patos. Todos os direitos reservados.
     </footer>
 </body>
+
 </html>
-  

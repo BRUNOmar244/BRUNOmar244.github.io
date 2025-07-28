@@ -1,0 +1,58 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #22e5ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #00796b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #004d40;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: rgb(255, 0, 0);
+            text-decoration: none;
+            padding: 15px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #00695c;
+        }
+
+        main {
+            padding: 30px;
+            text-align: center;
+        }
+
+        img {
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #004d40;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .curiosidades {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+   

@@ -1,52 +1,124 @@
-<!DOCTYPE html> <!--Diz para o navegador que o arquivo utiliza HTML 5-->
-<html lang="pt-BR">
-<!--INICIO DO HTML (pai de todos - contem tabem um atributo lang que diz ao navegador que a pagina eh em PT)  -->
+<!DOCTYPE html> <!--define como html 5-->
+<html lang = "pt-b"><!--Define o idioma  -->
 
-<head> <!-- CABECALHO com informacoes para o navegador (de modo geral)-->
-    <meta charset="UTF-8"> <!-- caracters no padrao UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- padrao da janela do navegador-->
-    <title>Site dos Patos</title><!--titulo da aba-->
-    <link rel="stylesheet" href="style.css" />
-
+<head><!--Parte invisivel (configurações gerais)-->
+    <meta charset="UTF-8"><!--charset define a condicação de elemtos e UTF é os mais comun pois recebe mvario caracteres --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Utilizado para configura o site para celular --><!--viewpor é janela de vizualizção cotent defiene como o conteudo deve esta na tela witd defone a largua  scale o tamnho do zoo  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title> Arkb Tranportes </title><!-- Nome que aparece na janela do navegador-->
 </head>
 
-<body>
-    <script src="app.js"></script><!--Inicio da pagina para o usuario-->
-    <header>
-        <!-- tag semantica  (nao tem funcao pratica, apenas diz ao navegador que eh o top da pagina e auxilia leitores de text e accessibila)-->
-        <h1>Bem-vindo ao Mundo dos Patos</h1> <!-- h1 Cabelha 1 MAior -->
-        <p>O melhor site para quem ama patos!</p> <!-- paragrafo-->
-    </header>
+<body><!--parete visivel ao usario -->
+   
+    <header><!--CABEÇALHO DA PAGINA tag semantica--><!-- Indica que o conteúdo é a introdução de uma seção ou página-->
+        <div class = "logo"> Arkb Transpores </div><!--sO PARA FACILITAR N AHORA CSS- ELE SIZ QUE ESSE DIV É PARA LOGO  -->
+  
 
-    <nav> <!-- tag sematinca que indica navegacao-->
-        <a href="#">Início</a> <!-- tag anchor, usada para links, ela contem o atributo href eh o destino-->
-        <a href="/especies">Espécies</a>
-        <a href="#">Curiosidades</a>
-        <a href="#">Contato</a>
+    <nav><!--Tag semnatica par ao menu de navgaão  --><!--Indica que o conteúdo é um conjunto de links de navegação-->
+      
+      <ul><!--Lista não ordenada-->
+        <li>Home </li><!--itens da lista-->
+        <li>Serviços </li>
+        <li>Contatos</li>
+      </ul>
+
     </nav>
+    </header>
+    <main class ="Principal">
+        
+        <div class="tech-circle"><!--Estilização para o css vai ser os circulos -->
+            
+            <div class ="circle"></div>
+            <div class ="circle"></div> 
+            <div class ="circle"></div>
+           
+        </div>
+        
+        <div class =" list"><!--estilizaçao para o css vai ser os ites do carrocel -->
+            
+            <div class = "item activ "><!--vai ser o itel na tela-->
+               
+                <div class =" product-img">
+                 <img src="foto3.png" alt="carro"> 
+                </div>
 
-    <main> <!-- conteudo principal do site -->
-        <h2>Conheça o pato</h2>
-        <img src="https://i0.statig.com.br/bancodeimagens/5t/h7/8v/5th78vhs4x0od12627ueuhor2.jpg" alt="Pato bonito">
-        <!--tag de imagem ela tem src source "fonte" alt caso a imagem nao carregue fica esse text -->
-        <p>Patos são aves aquáticas muito simpáticas e inteligentes. Eles vivem em lagos, rios e até em parques urbanos.
-        </p>
+            <div class="conteudo">
+                 <p >Nossos veiculos</p>
+                 <p>frete para atodo o brasil</p>
+                 <p>A melhor empresa do brasil </p>
+               <button> Saiba mais </button>
+            </div>
+            
+        </div>
+             
+        <div class = "item ">
+               
+               <div class =" product-img">
+                <img src="foto2.png" alt="carro"> 
+               </div>
+            
+            <div class="conteudo">
+                 <p >Nossos veiculos</p>
+                 <p>frete para atodo o brasil</p>
+                 <p>A melhor empresa do brasil </p>
+              <button> Saiba mais </button>
+            </div>   
 
-        <div class="curiosidades">
-            <!-- div eh uma tag em branco para divisorias note que ela tem o atributo class="curiosidaas" ou seja o CODIGO CSS vai buscar por essa palvra chave-->
-            <h3>Curiosidades:</h3>
-            <ul> <!-- Unordered list - lista sem ordem -->
-                <li>Patos podem dormir com um olho aberto.</li> <!-- item da lista-->
-                <li>Existem mais de 120 espécies diferentes de patos.</li>
-                <li>O som de um pato é chamado de grasnado.</li>
-                <li>Patos têm penas impermeáveis!</li>
-            </ul>
+        </div>
+             
+        <div class = "item ">
+
+               <div class =" product-img">
+                <img src="foto1.png" alt="carro"> 
+               </div>
+             
+            
+            <div class="conteudo">
+                 <p >Nossos veiculos</p>
+                 <p>frete para atodo o brasil</p>
+                 <p>A melhor empresa do brasil </p>
+              <button> Saiba mais </button>
+            </div>   
+
+        </div>
+
+
+    
+        </div>
+        
+        <div class ="setas">
+            <button class ="botao de seta" id ="antes">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-square" viewBox="0 0 16 16">
+                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                <path d="M5.795 12.456A.5.5 0 0 1 5.5 12V4a.5.5 0 0 1 .832-.374l4.5 4a.5.5 0 0 1 0 .748l-4.5 4a.5.5 0 0 1-.537.082"/>
+                </svg>
+            </button>
+
+             <button class ="botao de seta" id ="depois">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-square" viewBox="0 0 16 16">
+                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                <path d="M10.205 12.456A.5.5 0 0 0 10.5 12V4a.5.5 0 0 0-.832-.374l-4.5 4a.5.5 0 0 0 0 .748l4.5 4a.5.5 0 0 0 .537.082"/>
+                </svg>
+            </button>
+
+
+        </div>
+        
+        <div class =" indicadores">
+            <div class = "numeros">01</div>
+            <div class="pontos">
+                <div class = "ponto ativo"></div>
+                <div class = "ponto "></div>
+                <div class = "ponto "></div>
+            </div>
+
         </div>
     </main>
 
-    <footer>
-        &copy; 2025 Site dos Patos. Todos os direitos reservados.
-    </footer>
+
 </body>
 
 </html>

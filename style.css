@@ -1,56 +1,93 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #22e5ff;
-    margin: 0;
-    padding: 0;
-}
+*{  /* seletor universal  */
+ margin: 0;/*Marguem*/
+ padding: 0;/*espaçamento interno */
+ box-sizing: border-box;/*A propriedade box-sizing em CSS define como a largura e a altura de um elemento são calculadas, incluindo ou não o preenchimento (padding) e a borda (border) no cálculo*/
+ list-style: none;
+ font-family: "Orbitron", sans-serif;
 
-header {
-    background-color: #00796b;
-    color: white;
-    padding: 20px;
-    text-align: center;
+} 
+body{/*parete vizivel */
+    background-color: #0f0f1e;  /*corde fundo*/
+    color:#fff;/*colar das letras */
+    font-size: 16px;/*tamno da fonte*/
+    overflow: hidden;/*corta o conteudo para mander a formatação */
 }
-
-nav {
-    background-color: #004d40;
-    display: flex;
-    justify-content: center;
-}
-
-nav a {
-    color: rgb(255, 0, 0);
-    text-decoration: none;
-    padding: 15px 20px;
-    display: inline-block;
-}
-
-nav a:hover {
-    background-color: #00695c;
-}
-
-main {
-    padding: 30px;
-    text-align: center;
-}
-
-img {
-    max-width: 300px;
-    border-radius: 10px;
-}
-
-footer {
-    background-color: #004d40;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 10px;
+header {/*cabeçalho*/
     position: fixed;
+    width: 90vw; /*largura*/
+    top: 0;
+    padding: 20px 50px; /*margem */
+    display: flex; /*Deixa um ident do lado do outro no cabeçalho */
+    justify-content: space-between; /*Distribuição de forma unifome*/
+    align-items: center; /*alinha itens no centro */
+    z-index: 3;/*controla a proximidade do elemnto da tela*/
+
+} 
+.logo{
+    font-family: "Orbitron", sans-serif;
+    font-size: 2rem;/*Define o tamnho da fonte e 2 rem que elea vai ser 2 vezes mairo que o valor raiz do html */
+    font-weight: 900;/*Grossura ao peso da fonte */
+    color: #00f7ff;
+    text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);/*Adiciona uma sombra no texto*/
+}
+
+header nav ul{
+    display: flex;
+    gap: 48px;/*espaçamneto entre os itens*/
+}
+header nav ul li {
+    cursor: pointer;/*para aparecer um mão quando colocar o mause encima*/
+    position: relative;
+    padding: 5px 0;
+}
+header nav ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
     bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00f7ff;
+    transition: width 0.5s ease;
+}
+header nav ul li:hover::after {
     width: 100%;
 }
+.Principal{
+    height: 100vh;
+    position: relative;
+    background:linear-gradient(135deg,#0f0f1e 0%,#1f1f3a 100%);/*degrade de cores */ 
+    overflow: hidden;/* Controla o conteudo exibido e hidden corta oq estuver fora da tela */
+    text-align: center;
 
-.curiosidades {
-    text-align: left;
-    max-width: 600px;
-    margin: 0 auto;
+
+}
+.Principal::before{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle,rgba(0,247,255,0.2)0%,rgba(15,15,30,0)70%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(50px);
+    z-index: 1;
+
+}
+/* Este bloco controla o contêiner da imagem (a "moldura") */
+.product-img {
+  width: 500px;        /* Define a largura do contêiner da imagem */
+  height: 300px;       /* Define a altura do contêiner da imagem */
+  margin: 0 auto;      /* Centraliza o contêiner horizontalmente */
+  overflow: hidden;    /* Garante que a imagem não "vaze" para fora */
+}
+
+/* Este bloco controla a imagem (a "foto") dentro da "moldura" */
+.product-img img {
+  width: 100%;         /* Faz a imagem preencher a largura total do contêiner */
+  height: 100%;        /* Faz a imagem preencher a altura total do contêiner */
+  object-fit: cover;   /* Garante que a imagem preencha a moldura sem distorcer, cortando as bordas se necessário */
 }
